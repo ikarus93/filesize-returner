@@ -17,9 +17,14 @@ const calc = {
 module.exports = function(path, types) {
     const fileSize = fs.statSync(path).size;
     let res = {size: {bytes: fileSize}};
-    types.forEach( type => {
+    console.log(types)
+    if(types && Array.isArray(types)) {
+        types.forEach( type => {
         res.size[type] = calc[type](fileSize)
-    })
-    
+        }) 
+    } else if (types) {
+            res.size[types] = calc[types](fileSize)
+        }
+
     return res;
 }
