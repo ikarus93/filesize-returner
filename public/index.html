@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>FileSize API</title>
+    </head>
+    <body>
+        <h3>Submit a file to view its filesize</h3>
+        <form method="POST" enctype="multipart/form-data" action="/">
+            <input type="file" name="file"/>
+            <h4>Choose one for multiple units of measurement</h4>
+            <input type="checkbox" id="kb" name="type" value="kb"/>
+            <label for"kb">KB</label>
+            <input type="checkbox" id="mb" name="type" value="mb"/>
+            <label for"mb">MB</label>
+            <input type="checkbox" id="gb" name="type" value="gb"/>
+            <label for"kb">GB</label>
+            <input type="submit" />
+        </form>
+    </body>
+</html>
